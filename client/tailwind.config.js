@@ -8,7 +8,7 @@ module.exports = {
       }),
       fontFamily : {
         raleway: ["Raleway"]
-      }
+      },
     },
   },
   variants: {
