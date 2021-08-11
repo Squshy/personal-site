@@ -1,10 +1,13 @@
 import type { NextPage } from "next";
+import { HomeText } from "../components/home/HomeText";
 import { SelfBackground } from "../components/home/SelfBackground";
 
 const Home: NextPage = () => {
   return (
     <>
-      <SelfBackground>Hey yo</SelfBackground>
+      <SelfBackground>
+        <HomeText />
+      </SelfBackground>
     </>
   );
 };

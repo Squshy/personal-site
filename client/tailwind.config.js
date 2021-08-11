@@ -5,7 +5,10 @@ module.exports = {
     extend: {
       backgroundImage: theme => ({
         'main-self-photo': "url(../public/images/main-self-photo.jpg)"
-      })
+      }),
+      fontFamily : {
+        raleway: ["Raleway"]
+      }
     },
   },
   variants: {
