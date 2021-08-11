@@ -1,13 +1,12 @@
-import type { NextPage } from 'next'
-import Head from 'next/head'
-import Image from 'next/image'
+import type { NextPage } from "next";
+import { SelfBackground } from "../components/home/SelfBackground";
 
 const Home: NextPage = () => {
   return (
-    <div className={``}>
-      Hey
-    </div>
-  )
-}
+    <>
+      <SelfBackground>Hey yo</SelfBackground>
+    </>
+  );
+};
 
-export default Home
+export default Home;
