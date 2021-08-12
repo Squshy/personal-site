@@ -1,4 +1,6 @@
 import React from "react";
+import { LinkIcon } from "@heroicons/react/outline";
+import Link from "next/link";
 
 export interface DegreeProps {
   school: string;
@@ -28,10 +30,15 @@ export const Degree: React.FC<DegreeProps> = ({
         </div>
         <div className={`italic`}>{degree}</div>
         <div className={`text-sm`}>{school}</div>
+        <Link href={link} passHref>
+          <LinkIcon
+            className={`w-4 h-4 text-gray-300 mt-2 hover:text-gray-700 transition duration-200 cursor-pointer`}
+          />
+        </Link>
       </div>
       <div className={`text-right flex flex-col md:flex-row`}>
         <div>{startDate}</div>
-        <div>{" "}-{" "}</div>
+        <div> - </div>
         <div>{endDate}</div>
       </div>
     </div>
