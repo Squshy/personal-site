@@ -1,11 +1,15 @@
 import type { GetStaticProps, NextPage } from "next";
+import { DegreeProps } from "../components/education/Degree";
+import { Education } from "../components/education/Education";
 import { AboutMe, AboutProps } from "../components/home/AboutMe";
 import { HomeText } from "../components/home/HomeText";
 import { SelfBackground } from "../components/home/SelfBackground";
 import { getAboutInfo } from "../lib/about";
+import educations from "../static/education/education.json";
 
 interface IndexProps {
   aboutData: AboutProps;
+  educations: Array<DegreeProps>;
 }
 
 export const getStaticProps: GetStaticProps = async () => {
@@ -13,11 +17,12 @@ export const getStaticProps: GetStaticProps = async () => {
   return {
     props: {
       aboutData,
+      educations,
     },
   };
 };
 
-const Home: NextPage<IndexProps> = ({ aboutData }) => {
+const Home: NextPage<IndexProps> = ({ aboutData, educations }) => {
   return (
     <>
       <SelfBackground>
@@ -29,6 +34,7 @@ const Home: NextPage<IndexProps> = ({ aboutData }) => {
         age={aboutData?.age}
         location={aboutData?.location}
       />
+      <Education educations={educations} />
     </>
   );
 };
