@@ -1,12 +1,12 @@
 [
   {
-    "school": "Durham College",
-    "startDate": "Sept 2014",
-    "endDate": "March 2016",
-    "program": "Contemporary Web Design",
-    "degree": "Diploma",
-    "link": "https://durhamcollege.ca/programs/interactive-media-design",
-    "honors": false
+    "school": "Ontario Tech University",
+    "startDate": "Sept 2019",
+    "endDate": "June 2021",
+    "program": "Computer Science",
+    "degree": "Bachelor of Science",
+    "link": "https://sites.ontariotechu.ca/pathways/on-campus/computing%20science---bridge.php",
+    "honors": true
   },
   {
     "school": "Durham College",
@@ -18,12 +18,12 @@
     "honors": true
   },
   {
-    "school": "Ontario Tech University",
-    "startDate": "Sept 2019",
-    "endDate": "June 2021",
-    "program": "Computer Science",
-    "degree": "Bachelor of Science",
-    "link": "https://sites.ontariotechu.ca/pathways/on-campus/computing%20science---bridge.php",
-    "honors": true
+    "school": "Durham College",
+    "startDate": "Sept 2014",
+    "endDate": "March 2016",
+    "program": "Contemporary Web Design",
+    "degree": "Diploma",
+    "link": "https://durhamcollege.ca/programs/interactive-media-design",
+    "honors": false
   }
 ]
