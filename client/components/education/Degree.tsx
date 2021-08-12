@@ -22,7 +22,7 @@ export const Degree: React.FC<DegreeProps> = ({
   startDate,
 }) => {
   return (
-    <div className={`p-2 md:p-5 bg-white w-full flex flex-row justify-between`}>
+    <div className={`p-2 md:p-5 bg-white w-full flex flex-row justify-between shadow-md`}>
       <div>
         <div className={`text-lg font-medium`}>
           {program}{" "}

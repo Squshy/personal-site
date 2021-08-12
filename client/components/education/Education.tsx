@@ -1,5 +1,6 @@
 import React from "react";
 import { BodyWrapper } from "../BodyWrapper";
+import { Title } from "../Title";
 import { DegreeProps, Degree } from "./Degree";
 
 interface EducationProps {
@@ -9,6 +10,7 @@ interface EducationProps {
 export const Education: React.FC<EducationProps> = ({ educations }) => {
   return (
     <BodyWrapper className={`bg-gray-100 space-y-4`}>
+      <Title text={`Education`} />
       {educations?.map((education, index) => {
         return (
           <Degree
