@@ -2,10 +2,10 @@ import type { GetStaticProps, NextPage } from "next";
 import { AboutMe, AboutProps } from "../components/home/AboutMe";
 import { HomeText } from "../components/home/HomeText";
 import { SelfBackground } from "../components/home/SelfBackground";
-import { getAboutInfo } from '../lib/about';
+import { getAboutInfo } from "../lib/about";
 
 interface IndexProps {
-  aboutData: AboutProps
+  aboutData: AboutProps;
 }
 
 export const getStaticProps: GetStaticProps = async () => {
@@ -17,13 +17,18 @@ export const getStaticProps: GetStaticProps = async () => {
   };
 };
 
-const Home: NextPage<IndexProps> = ({aboutData}) => {
+const Home: NextPage<IndexProps> = ({ aboutData }) => {
   return (
     <>
       <SelfBackground>
         <HomeText />
       </SelfBackground>
-      <AboutMe title={aboutData?.title} body={aboutData?.body} age={aboutData?.age}/>
+      <AboutMe
+        title={aboutData?.title}
+        body={aboutData?.body}
+        age={aboutData?.age}
+        location={aboutData?.location}
+      />
     </>
   );
 };

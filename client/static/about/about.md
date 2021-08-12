@@ -1,5 +1,6 @@
 ---
 title: 'About Me'
-body: 'ayo my name is coo ldude 50000.  I come from the sewers and occasionally eat pizza bro ITS SO COOOL YEAH WOO HOO'
+body: 'Aspiring full-stack developer, and software engineer.  I am always willing to learn new technologies and see how things work.'
 birthDate: '1996-02-23'
+location: 'Oshawa, ON'
 ---

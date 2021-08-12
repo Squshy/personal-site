@@ -25,7 +25,8 @@ export function getAboutInfo() {
     return {
       title: data.title,
       body: data.body,
-      age: getAge(birthDate)
+      age: getAge(birthDate),
+      location: data.location
     };
   }
   return null;
