@@ -4,9 +4,10 @@ import { BodyWrapper } from "../BodyWrapper";
 export interface AboutProps {
   title: string;
   body: string;
+  age: Number
 }
 
-export const AboutMe: React.FC<AboutProps> = ({ title, body }) => {
+export const AboutMe: React.FC<AboutProps> = ({ title, body, age }) => {
   return (
     <BodyWrapper>
       <div
@@ -14,7 +15,8 @@ export const AboutMe: React.FC<AboutProps> = ({ title, body }) => {
       >
         {title}
       </div>
-      <div>{body}</div>
+      <div className={`text-center mt-4`}>{body}</div>
+      <div>{age}</div>
     </BodyWrapper>
   );
 };

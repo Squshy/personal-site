@@ -23,7 +23,7 @@ const Home: NextPage<IndexProps> = ({aboutData}) => {
       <SelfBackground>
         <HomeText />
       </SelfBackground>
-      <AboutMe title={aboutData?.title} body={aboutData?.body}/>
+      <AboutMe title={aboutData?.title} body={aboutData?.body} age={aboutData?.age}/>
     </>
   );
 };
