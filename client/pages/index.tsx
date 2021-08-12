@@ -1,15 +1,29 @@
-import type { NextPage } from "next";
-import { AboutMe } from "../components/home/AboutMe";
+import type { GetStaticProps, NextPage } from "next";
+import { AboutMe, AboutProps } from "../components/home/AboutMe";
 import { HomeText } from "../components/home/HomeText";
 import { SelfBackground } from "../components/home/SelfBackground";
+import { getAboutInfo } from '../lib/about';
 
-const Home: NextPage = () => {
+interface IndexProps {
+  aboutData: AboutProps
+}
+
+export const getStaticProps: GetStaticProps = async () => {
+  const aboutData = getAboutInfo();
+  return {
+    props: {
+      aboutData,
+    },
+  };
+};
+
+const Home: NextPage<IndexProps> = ({aboutData}) => {
   return (
     <>
       <SelfBackground>
         <HomeText />
       </SelfBackground>
-      <AboutMe />
+      <AboutMe title={aboutData?.title} body={aboutData?.body}/>
     </>
   );
 };
