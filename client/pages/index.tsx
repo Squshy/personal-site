@@ -4,8 +4,9 @@ import { Education } from "../components/education/Education";
 import { AboutMe, AboutProps } from "../components/home/AboutMe";
 import { HomeText } from "../components/home/HomeText";
 import { SelfBackground } from "../components/home/SelfBackground";
+import { Projects } from "../components/projects/Projects";
 import { getAboutInfo } from "../lib/about";
-import educations from "../static/education/education.json";
+import educations from "../public/static/education/education.json";
 
 interface IndexProps {
   aboutData: AboutProps;
@@ -35,6 +36,7 @@ const Home: NextPage<IndexProps> = ({ aboutData, educations }) => {
         location={aboutData?.location}
       />
       <Education educations={educations} />
+      <Projects />
     </>
   );
 };

@@ -2,7 +2,7 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 
-const aboutPath: string = path.join(process.cwd(), "static/about/about.md");
+const aboutPath: string = path.join(process.cwd(), "/public/static/about/about.md");
 
 const getAge = (birthDate: Date) => {
   const currentDate = new Date();
