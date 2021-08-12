@@ -9,7 +9,6 @@ const Home: NextPage = () => {
       <SelfBackground>
         <HomeText />
       </SelfBackground>
-      <div className={`h-64`} />
       <AboutMe />
     </>
   );
