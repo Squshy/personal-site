@@ -3,7 +3,7 @@ import { BodyWrapper } from "../BodyWrapper";
 
 export const Projects: React.FC = () => {
   return (
-    <BodyWrapper>
+    <BodyWrapper className={``}>
       <div>HERE ARE MY PROJECTS</div>
     </BodyWrapper>
   );
