@@ -9,7 +9,7 @@ interface EducationProps {
 
 export const Education: React.FC<EducationProps> = ({ educations }) => {
   return (
-    <BodyWrapper className={`bg-gray-100 space-y-4`}>
+    <BodyWrapper className={`bg-gray-50 space-y-4`}>
       <Title text={`Education`} />
       {educations?.map((education, index) => {
         return (
