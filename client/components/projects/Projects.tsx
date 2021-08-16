@@ -19,7 +19,7 @@ export const Projects: React.FC<ProjectsProps> = ({ projects }) => {
               img={project.img}
               liveDemo={project.liveDemo}
               technology={project.technology}
-              title={project.technology}
+              title={project.title}
             />
           );
         })}
