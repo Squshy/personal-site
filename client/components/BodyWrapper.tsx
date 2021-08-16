@@ -10,7 +10,7 @@ export const BodyWrapper: React.FC<BodyWrapperProps> = ({
 }) => {
   return (
     <div
-      className={`p-5 md:p-10 h-full w-full justify-center align-center items-center flex flex-col ${
+      className={`pr-5 pl-5 pb-20 pt-20 md:pr-10 md:pl-10 md:pb-30 md:pt-30 h-full w-full justify-center align-center items-center flex flex-col ${
         className && className
       }`}
     >

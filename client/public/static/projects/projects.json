@@ -1,0 +1,10 @@
+[
+  {
+    "title": "Mood Calendar App",
+    "img": "/images/projects/mood_calendar/main.png",
+    "technology": "Flutter",
+    "description": "A simple mood tracking phone app made for a school group project.  It allows for registration of users which is handled through Google's Firebase.  This app acts as a simple diary for how you are feeling day to day.  You can select which mood suits you best for today and write a small description to go along with it.  There are multiple ways you can check your moods throughout the months or year via the in app calendar, or the different graphs and charts.  It also comes with settings which you can change the language for most of the app between English and Korean.  Also, you can change which colors you want displayed for certain moods.",
+    "github": "https://github.com/Squshy/Flutter_Mood_Calendar",
+    "liveDemo": null
+  }
+]
