@@ -1,32 +1,40 @@
-import React from "react";
-import { DiGithubBadge } from "react-icons/di";
-import { IconContext } from "react-icons/lib";
+import React, { useState } from "react";
 import Link from "next/link";
 import { ExternalLinkIcon } from "@heroicons/react/outline";
+import { CodeIcon } from "@heroicons/react/outline";
+import { ToolTip } from "../ToolTip";
 
 export interface ProjectLinks {
   github: string;
   livedemo: string | null;
 }
 
+const baseIconClass = `w-6 h-6 text-gray-600 cursor-pointer transition duration-150 hover:text-black`;
+
 export const ProjectLinks: React.FC<ProjectLinks> = ({ github, livedemo }) => {
+  const [showGithubToolTip, setShowGitHubToolTip] = useState<boolean>(false);
+
   return (
     <div className={`flex flex-row`}>
-      <Link href={github} passHref>
-        <IconContext.Provider
-          value={{
-            size: "2em",
-            className: `text-gray-500 cursor-pointer transition duration-100 ease-in-out hover:text-gray-700`,
-          }}
-        >
-          <DiGithubBadge />
-        </IconContext.Provider>
-      </Link>
-      <Link href={github} passHref>
-        <>
-          <ExternalLinkIcon className={`w-6 h-6 cursor-pointer`} />
-        </>
-      </Link>
+      <div
+        onMouseEnter={() => setShowGitHubToolTip(true)}
+        onMouseLeave={() => setShowGitHubToolTip(false)}
+        className={``}
+      >
+        <Link href={github} passHref>
+          <>
+            <CodeIcon className={`${baseIconClass}`} />
+            {showGithubToolTip && <ToolTip text="View on GitHub" />}
+          </>
+        </Link>
+      </div>
+      {livedemo && (
+        <Link href={github} passHref>
+          <>
+            <ExternalLinkIcon className={`${baseIconClass} ml-2`} />
+          </>
+        </Link>
+      )}
     </div>
   );
 };
