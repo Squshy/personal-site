@@ -6,6 +6,7 @@ export const FadeIn: React.FC = ({ children }) => {
   const controls = useAnimation();
   const ref: any = useRef<HTMLDivElement>();
   const onScreen = useOnScreen(ref);
+
   useEffect(() => {
     if (onScreen)
       controls.start({
@@ -17,6 +18,7 @@ export const FadeIn: React.FC = ({ children }) => {
         },
       });
   }, [onScreen, controls]);
+  
   return (
     <motion.div initial={{ opacity: 0, y: 50 }} animate={controls} ref={ref}>
       {children}
