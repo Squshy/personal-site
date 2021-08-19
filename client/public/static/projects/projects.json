@@ -1,0 +1,20 @@
+[
+  {
+    "title": "Mood Calendar App",
+    "description": "A simple mood tracking app made with Flutter.",
+    "github": "https://github.com/Squshy/Flutter_Mood_Calendar",
+    "liveDemo": null
+  },
+  {
+    "title": "Squickz",
+    "description": "A browser clicker game made with React.",
+    "github": "https://github.com/Squshy/Squickz",
+    "liveDemo": null
+  },
+  {
+    "title": "Chat App",
+    "description": "A chatting application made with the front end made with React and Redux.  The back end is a Node Express server.",
+    "github": "https://github.com/Squshy/Chat-Application",
+    "liveDemo": null
+  }
+]

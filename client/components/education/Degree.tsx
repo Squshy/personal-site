@@ -1,4 +1,4 @@
-import React from "react";
+import React, { ForwardRefRenderFunction } from "react";
 import { LinkIcon } from "@heroicons/react/outline";
 import Link from "next/link";
 
@@ -21,8 +21,20 @@ export const Degree: React.FC<DegreeProps> = ({
   school,
   startDate,
 }) => {
+  const IconLink = React.forwardRef<SVGSVGElement>((props, ref) => {
+    return (
+      <LinkIcon
+        {...props}
+        className={`w-4 h-4 text-gray-300 mt-2 hover:text-gray-700 transition duration-200 cursor-pointer`}
+      />
+    );
+  });
+  IconLink.displayName = "IconLink";
+
   return (
-    <div className={`p-2 md:p-5 bg-white w-full flex flex-row justify-between shadow-md`}>
+    <div
+      className={`p-2 md:p-5 bg-white w-full flex flex-row justify-between shadow-md`}
+    >
       <div>
         <div className={`text-lg font-medium`}>
           {program}{" "}
@@ -31,9 +43,7 @@ export const Degree: React.FC<DegreeProps> = ({
         <div className={`italic`}>{degree}</div>
         <div className={`text-sm`}>{school}</div>
         <Link href={link} passHref>
-          <LinkIcon
-            className={`w-4 h-4 text-gray-300 mt-2 hover:text-gray-700 transition duration-200 cursor-pointer`}
-          />
+          <IconLink />
         </Link>
       </div>
       <div className={`text-right flex flex-col md:flex-row`}>
