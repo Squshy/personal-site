@@ -43,7 +43,9 @@ export const Degree: React.FC<DegreeProps> = ({
         <div className={`italic`}>{degree}</div>
         <div className={`text-sm`}>{school}</div>
         <Link href={link} passHref>
-          <IconLink />
+          <a>
+            <IconLink />
+          </a>
         </Link>
       </div>
       <div className={`text-right flex flex-col md:flex-row`}>
