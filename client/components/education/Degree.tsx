@@ -33,7 +33,7 @@ export const Degree: React.FC<DegreeProps> = ({
 
   return (
     <div
-      className={`p-2 md:p-5 bg-white w-full flex flex-row justify-between shadow-md`}
+      className={`transform hover:scale-105 ease-in-out duration-500 p-2 md:p-5 bg-white w-full flex flex-row justify-between shadow-md hover:shadow-xl`}
     >
       <div>
         <div className={`text-lg font-medium`}>
