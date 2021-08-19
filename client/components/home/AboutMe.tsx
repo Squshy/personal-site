@@ -27,7 +27,7 @@ export const AboutMe: React.FC<AboutProps> = ({
         <div className={`text-center text-sm mt-2`}>
           {age} | {location}
         </div>
-        <div className={`text-center mt-4`}>{body}</div>
+        <div className={`text-center mt-4 text-lg font-medium`}>{body}</div>
       </BodyWrapper>
     </FadeIn>
   );
