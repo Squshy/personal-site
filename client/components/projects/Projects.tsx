@@ -1,5 +1,6 @@
 import React from "react";
 import { BodyWrapper } from "../BodyWrapper";
+import { Title } from "../Title";
 import { Project, ProjectProps } from "./Project";
 
 export interface ProjectsProps {
@@ -8,8 +9,9 @@ export interface ProjectsProps {
 
 export const Projects: React.FC<ProjectsProps> = ({ projects }) => {
   return (
-    <BodyWrapper className={``}>
-      <div className={`flex flex-row flex-wrap`}>
+    <BodyWrapper className={`space-y-4`}>
+      <Title text={`Projects`}/>
+      <div className={`flex flex-row flex-wrap -m-4 justify-center`}>
         {projects?.map((project, index) => {
           return (
             <Project
