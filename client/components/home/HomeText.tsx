@@ -3,6 +3,7 @@ import { motion, useAnimation } from "framer-motion";
 
 export const HomeText: React.FC = () => {
   const controls = useAnimation();
+
   useEffect(() => {
       controls.start({
         x: 0,
@@ -13,6 +14,7 @@ export const HomeText: React.FC = () => {
         },
       });
   }, [controls]);
+  
   return (
     <motion.div
       initial={{ opacity: 0, x: -50 }}

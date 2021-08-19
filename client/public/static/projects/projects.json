@@ -16,5 +16,11 @@
     "description": "A chatting application made with the front end made with React and Redux.  The back end is a Node Express server.",
     "github": "https://github.com/Squshy/Chat-Application",
     "liveDemo": null
+  },
+  {
+    "title": "Personal Site",
+    "description": "The site you are currently looking at is up on GitHub 👨‍🌾.",
+    "github": "https://github.com/Squshy/personal-site",
+    "liveDemo": null
   }
 ]
