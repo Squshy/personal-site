@@ -1,7 +1,7 @@
 import {useEffect, useState, MutableRefObject } from "react";
 // https://usehooks.com/useOnScreen/
 
-function useOnScreen<T extends Element>(ref: MutableRefObject<T>, rootMargin: string = "0px"): boolean {
+export default function useOnScreen<T extends Element>(ref: MutableRefObject<T>, rootMargin: string = "0px"): boolean {
   // State and setter for storing whether element is visible
   const [isIntersecting, setIntersecting] = useState<boolean>(false);
   useEffect(() => {
