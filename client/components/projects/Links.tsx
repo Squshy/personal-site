@@ -1,30 +1,24 @@
-import React, { useState } from "react";
+import React from "react";
 import Link from "next/link";
 import { ExternalLinkIcon } from "@heroicons/react/outline";
-import { CodeIcon } from "@heroicons/react/outline";
-import { ToolTip } from "../ToolTip";
+import { GitHubIcon } from "../../svg/GitHubIcon";
 
 export interface ProjectLinks {
   github: string;
   livedemo: string | null;
 }
 
-const baseIconClass = `w-6 h-6 text-gray-600 cursor-pointer transition duration-150 hover:text-black`;
+const baseIconClass = `transform hover:scale-125 w-6 h-6 text-gray-600 cursor-pointer transition duration-150 hover:text-black`;
 
 export const ProjectLinks: React.FC<ProjectLinks> = ({ github, livedemo }) => {
-  const [showGithubToolTip, setShowGitHubToolTip] = useState<boolean>(false);
 
   return (
     <div className={`flex flex-row`}>
       <div
-        onMouseEnter={() => setShowGitHubToolTip(true)}
-        onMouseLeave={() => setShowGitHubToolTip(false)}
-        className={``}
       >
         <Link href={github} passHref>
           <>
-            <CodeIcon className={`${baseIconClass}`} />
-            {showGithubToolTip && <ToolTip text="View on GitHub" />}
+            <GitHubIcon className={`${baseIconClass}`} />
           </>
         </Link>
       </div>
