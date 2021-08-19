@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useRef } from "react";
 import type { GetStaticProps, NextPage } from "next";
 import { DegreeProps } from "../components/education/Degree";
 import { Education } from "../components/education/Education";
@@ -32,16 +32,38 @@ export const getStaticProps: GetStaticProps = async () => {
 };
 
 const Home: NextPage<IndexProps> = ({ aboutData, educations, projects }) => {
-  const [currentNavLink, setCurrentNavLink] = useState<string | null>();
   const aboutRef: any = useRef<HTMLDivElement>();
+  const educationRef: any = useRef<HTMLDivElement>();
+  const projectRef: any = useRef<HTMLDivElement>();
 
   const scrollToComponent = (link: string) => {
     switch (link) {
       case ABOUT:
         if (aboutRef.current) {
-          setCurrentNavLink(ABOUT);
+          console.log("About")
           aboutRef.current.scrollIntoView();
         }
+        break;
+      case EDUCATION:
+        if (educationRef.current) {
+          console.log("Education")
+          educationRef.current.scrollIntoView({
+            block: "end",
+          });
+        }
+        break;
+      case PROJECTS:
+        if (projectRef.current) {
+          console.log("Projects")
+          projectRef.current.scrollIntoView();
+        }
+        break;
+      default:
+        if (aboutRef.current) {
+          console.log("Default")
+          aboutRef.current.scrollIntoView();
+        }
+        break;
     }
   };
 
@@ -52,15 +74,20 @@ const Home: NextPage<IndexProps> = ({ aboutData, educations, projects }) => {
         <SelfBackground>
           <HomeText />
         </SelfBackground>
-        <AboutMe
-          pRef={aboutRef}
-          title={aboutData?.title}
-          body={aboutData?.body}
-          age={aboutData?.age}
-          location={aboutData?.location}
-        />
-        <Education educations={educations} />
-        <Projects projects={projects} />
+        <div ref={aboutRef}>
+          <AboutMe
+            title={aboutData?.title}
+            body={aboutData?.body}
+            age={aboutData?.age}
+            location={aboutData?.location}
+          />
+        </div>
+        <div ref={educationRef}>
+          <Education educations={educations} />
+        </div>
+        <div ref={projectRef}>
+          <Projects projects={projects} />
+        </div>
       </main>
       <Footer />
     </>
