@@ -16,9 +16,7 @@ export const Projects: React.FC<ProjectsProps> = ({ projects }) => {
               key={index}
               description={project.description}
               github={project.github}
-              img={project.img}
               liveDemo={project.liveDemo}
-              technology={project.technology}
               title={project.title}
             />
           );

@@ -3,9 +3,7 @@ import { ProjectLinks } from "./Links";
 
 
 export interface ProjectProps {
-  img: string;
   title: string;
-  technology: string;
   description: string;
   github: string;
   liveDemo: string | null;
@@ -14,9 +12,7 @@ export interface ProjectProps {
 export const Project: React.FC<ProjectProps> = ({
   description,
   github,
-  img,
   liveDemo,
-  technology,
   title,
 }) => {
   return (
