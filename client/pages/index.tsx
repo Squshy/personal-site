@@ -1,6 +1,7 @@
 import type { GetStaticProps, NextPage } from "next";
 import { DegreeProps } from "../components/education/Degree";
 import { Education } from "../components/education/Education";
+import { Footer } from "../components/Footer";
 import { AboutMe, AboutProps } from "../components/home/AboutMe";
 import { HomeText } from "../components/home/HomeText";
 import { SelfBackground } from "../components/home/SelfBackground";
@@ -41,6 +42,7 @@ const Home: NextPage<IndexProps> = ({ aboutData, educations, projects }) => {
       />
       <Education educations={educations} />
       <Projects projects={projects} />
+      <Footer />
     </>
   );
 };
