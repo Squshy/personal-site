@@ -3,7 +3,7 @@
     "title": "Mood Calendar App",
     "img": "/images/projects/mood_calendar/main.png",
     "technology": "Flutter",
-    "description": "A simple mood tracking app.",
+    "description": "A simple mood tracking app made with Flutter.",
     "github": "https://github.com/Squshy/Flutter_Mood_Calendar",
     "liveDemo": null
   }
