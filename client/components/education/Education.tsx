@@ -11,7 +11,7 @@ interface EducationProps {
 export const Education: React.FC<EducationProps> = ({ educations }) => {
   return (
     <FadeIn>
-      <BodyWrapper className={`bg-gray-50 space-y-4`}>
+      <BodyWrapper className={`space-y-4`} bgColor={`bg-gray-50`}>
         <Title text={`Education`} />
         {educations?.map((education, index) => {
           return (
