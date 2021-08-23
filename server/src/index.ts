@@ -8,6 +8,7 @@ app.use(express.json());
 
 app.post('/mail', (req, res) => {
   console.log(req.body)
+  res.send("EYO U HIT US")
 })
 
 app.listen(PORT, () => {

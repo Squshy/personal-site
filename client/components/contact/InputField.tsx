@@ -5,9 +5,10 @@ interface InputFieldProps {
   id: string;
   placeholder?: string;
   type: string;
+  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
-export const InputField: React.FC<InputFieldProps> = ({id, placeholder, type}) => {
+export const InputField: React.FC<InputFieldProps> = ({id, placeholder, type, onChange}) => {
   return (
     <div className={`w-full px-3 mb-6`}>
       <FormLabel id={id} />
@@ -16,6 +17,7 @@ export const InputField: React.FC<InputFieldProps> = ({id, placeholder, type}) =
         id={id}
         type={type}
         placeholder={placeholder}
+        onChange={onChange}
       ></input>
     </div>
   );
