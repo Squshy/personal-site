@@ -1,6 +1,7 @@
 import express from "express";
 import { createTransport } from "nodemailer";
-const nodemailer = require('nodemailer')
+import { validate} from 'email-validator';
+import { nextTick } from "process";
 require("dotenv").config();
 
 interface ResponseInt {
@@ -23,15 +24,19 @@ app.post("/mail", async (req, res) => {
   /* error checks */
   if (name === null) {
     response.error = "Please enter a name";
-    res.send(response);
+    return res.status(400).send(response);
   }
   if (email === null) {
     response.error = "Please enter an email";
-    res.send(response);
+    return res.status(400).send(response);
   }
   if (message === null) {
     response.error = "Please enter a message";
-    res.send(response);
+    return res.status(400).send(response);
+  }
+  if(!validate(email)) {
+    response.error = "Invalid email address";
+    return res.status(400).send(response);
   }
 
   const transporter = createTransport({
@@ -42,17 +47,18 @@ app.post("/mail", async (req, res) => {
     }
   });
 
+
   const mailOptions= {
     from: email,
     to: process.env.EMAIL,
-    subject: `Message from ${name}`,
+    subject: `Site message from ${name}`,
     text: message
   }
 
   const info = await transporter.sendMail(mailOptions);
-  console.log(`Message sent: ${info.messageId}`)
+  response.success = "Message sent successfully!"
 
-  res.send("EYO U HIT US");
+  return res.send(response);
 });
 
 app.listen(PORT, () => {

@@ -7,7 +7,11 @@ interface TextFieldProps {
   onChange: (e: React.ChangeEvent<HTMLTextAreaElement>) => void;
 }
 
-export const TextField: React.FC<TextFieldProps> = ({ id, placeholder ,onChange}) => {
+export const TextField: React.FC<TextFieldProps> = ({
+  id,
+  placeholder,
+  onChange,
+}) => {
   return (
     <div className={`w-full px-3 mb-6`}>
       <FormLabel id={id} />

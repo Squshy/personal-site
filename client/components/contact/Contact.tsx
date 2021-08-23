@@ -9,16 +9,17 @@ export const Contact: React.FC = () => {
   const [name, setName] = useState<string | null>(null);
   const [email, setEmail] = useState<string | null>(null);
   const [message, setMessage] = useState<string | null>(null);
+  const [loading, setLoading] = useState<boolean>(false);
 
   const onSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const body = {
       name: name,
       email: email,
-      message: message
+      message: message,
     };
     axios
-      .post("/api/mail", body)
+      .post(`/api/mail`, body)
       .then((response) => console.log(response))
       .catch((err) => console.log(err));
   };
