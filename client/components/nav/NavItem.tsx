@@ -7,11 +7,13 @@ export interface NavItemProps {
 
 export const NavItem: React.FC<NavItemProps> = ({ text, onClick }) => {
   return (
-    <button
+    <a
       className={`transition ease-in-out duration-200 italic text-black cursor-pointer self-center text-sm text-black text-opacity-50 hover:text-opacity-100 w-full text-center p-2 hover:bg-gray-999 hover:text-white`}
       onClick={() => onClick(text.toUpperCase())}
+      aria-label={`Go to ${text}`}
+      title={text}
     >
       {text}
-    </button>
+    </a>
   );
 };
