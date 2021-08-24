@@ -4,12 +4,13 @@ import { WebItem } from "./WebItem";
 
 interface WebNavProps {
   scrollTo: (link: string) => void;
+  className?: string;
 }
 
-export const WebNav: React.FC<WebNavProps> = ({ scrollTo }) => {
+export const WebNav: React.FC<WebNavProps> = ({ scrollTo,className  }) => {
   return (
     <header
-      className={`flex flex-row w-full justify-evenly z-50 fixed top-0 shadow-md bg-white`}
+      className={`flex flex-row justify-evenly ${className}`}
     >
       {Object.values(NAV_ITEMS).map((text, index) => {
         return <WebItem text={text} onClick={scrollTo} key={index} />;

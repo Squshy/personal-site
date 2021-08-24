@@ -5,9 +5,13 @@ import { MobileItem } from "./MobileItem";
 
 interface MobileNavProps {
   scrollTo: (link: string) => void;
+  className?: string;
 }
 
-export const MobileNav: React.FC<MobileNavProps> = ({ scrollTo }) => {
+export const MobileNav: React.FC<MobileNavProps> = ({
+  scrollTo,
+  className,
+}) => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
 
   const createMobileLinks = () => {
@@ -17,7 +21,9 @@ export const MobileNav: React.FC<MobileNavProps> = ({ scrollTo }) => {
   };
 
   return (
-    <div className="flex flex-col justify-end p-2 bg-white fixed top-0 z-50 w-full shadow-md">
+    <div
+      className={`flex flex-col justify-end p-2 ${className}`}
+    >
       <div className={`flex flex-row justify-between items-center`}>
         <p className={`text-center ml-2 font-medium`}>Calvin Lapp</p>
         <button
