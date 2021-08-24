@@ -21,7 +21,7 @@ export const MobileNav: React.FC<MobileNavProps> = ({
   };
 
   return (
-    <div
+    <header
       className={`flex flex-col justify-end p-2 ${className}`}
     >
       <div className={`flex flex-row justify-between items-center`}>
@@ -53,6 +53,6 @@ export const MobileNav: React.FC<MobileNavProps> = ({
           {createMobileLinks()}
         </div>
       )}
-    </div>
+    </header>
   );
 };
