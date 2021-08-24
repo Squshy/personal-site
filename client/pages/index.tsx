@@ -12,9 +12,8 @@ import { Projects } from "../components/projects/Projects";
 import { getAboutInfo } from "../lib/about";
 import educations from "../public/static/education/education.json";
 import projects from "../public/static/projects/projects.json";
-import { EDUCATION, PROJECTS, ABOUT, CONTACT } from "../constants";
+import { NAV_ITEMS } from "../constants";
 import { Contact } from "../components/contact/Contact";
-import useOnScreen from "../hooks/useOnScreen";
 
 interface IndexProps {
   aboutData: AboutProps;
@@ -41,22 +40,22 @@ const Home: NextPage<IndexProps> = ({ aboutData, educations, projects }) => {
 
   const scrollToComponent = (link: string) => {
     switch (link) {
-      case ABOUT:
+      case NAV_ITEMS.ABOUT:
         if (aboutRef.current) {
           aboutRef.current.scrollIntoView();
         }
         break;
-      case EDUCATION:
+      case NAV_ITEMS.EDUCATION:
         if (educationRef.current) {
           educationRef.current.scrollIntoView();
         }
         break;
-      case PROJECTS:
+      case NAV_ITEMS.PROJECTS:
         if (projectRef.current) {
           projectRef.current.scrollIntoView();
         }
         break;
-      case CONTACT:
+      case NAV_ITEMS.CONTACT:
         if (contactRef.current) {
           contactRef.current.scrollIntoView();
         }
