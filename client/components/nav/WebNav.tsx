@@ -1,12 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { NAV_ITEMS } from "../../constants";
 import { NavItem } from "./NavItem";
 
-interface NavProps {
+interface WebNavProps {
   scrollTo: (link: string) => void;
 }
 
-export const Nav: React.FC<NavProps> = ({ scrollTo }) => {
+export const WebNav: React.FC<WebNavProps> = ({ scrollTo }) => {
   return (
     <header
       className={`flex flex-row w-full justify-evenly z-50 fixed top-0 shadow-sm bg-opacity-100 bg-gray-50`}
