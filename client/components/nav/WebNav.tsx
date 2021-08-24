@@ -9,7 +9,7 @@ interface WebNavProps {
 export const WebNav: React.FC<WebNavProps> = ({ scrollTo }) => {
   return (
     <header
-      className={`flex flex-row w-full justify-evenly z-50 fixed top-0 shadow-sm bg-white`}
+      className={`flex flex-row w-full justify-evenly z-50 fixed top-0 shadow-md bg-white`}
     >
       {Object.values(NAV_ITEMS).map((text, index) => {
         return <WebItem text={text} onClick={scrollTo} key={index} />;

@@ -17,7 +17,7 @@ export const MobileNav: React.FC<MobileNavProps> = ({ scrollTo }) => {
   };
 
   return (
-    <div className="flex flex-col justify-end p-2 bg-white fixed top-0 z-50 w-full shadow-sm">
+    <div className="flex flex-col justify-end p-2 bg-white fixed top-0 z-50 w-full shadow-md">
       <div className={`flex flex-row justify-between items-center`}>
         <p className={`text-center ml-2 font-medium`}>Calvin Lapp</p>
         <button
