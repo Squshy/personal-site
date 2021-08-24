@@ -23,6 +23,7 @@ export const TextField: React.FC<TextFieldProps> = ({
         id={id}
         placeholder={placeholder}
         onChange={onChange}
+        required
       ></textarea>
       <InputError text={error} />
     </div>

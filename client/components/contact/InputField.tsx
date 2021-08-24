@@ -26,6 +26,7 @@ export const InputField: React.FC<InputFieldProps> = ({
         type={type}
         placeholder={placeholder}
         onChange={onChange}
+        required
       ></input>
       <InputError text={error} />
     </div>
