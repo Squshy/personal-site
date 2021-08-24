@@ -10,8 +10,8 @@ interface EducationProps {
 
 export const Education: React.FC<EducationProps> = ({ educations }) => {
   return (
-    <FadeIn>
-      <BodyWrapper className={`space-y-4`} bgColor={`bg-gray-50`}>
+    <BodyWrapper bgColor={`bg-gray-50`}>
+      <FadeIn className={`space-y-4 w-full flex flex-col items-center`}>
         <Title text={`Education`} />
         {educations?.map((education, index) => {
           return (
@@ -27,7 +27,7 @@ export const Education: React.FC<EducationProps> = ({ educations }) => {
             />
           );
         })}
-      </BodyWrapper>
-    </FadeIn>
+      </FadeIn>
+    </BodyWrapper>
   );
 };
