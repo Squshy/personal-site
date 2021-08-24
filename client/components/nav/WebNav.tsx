@@ -1,6 +1,6 @@
 import React from "react";
 import { NAV_ITEMS } from "../../constants";
-import { NavItem } from "./NavItem";
+import { WebItem } from "./WebItem";
 
 interface WebNavProps {
   scrollTo: (link: string) => void;
@@ -9,12 +9,11 @@ interface WebNavProps {
 export const WebNav: React.FC<WebNavProps> = ({ scrollTo }) => {
   return (
     <header
-      className={`flex flex-row w-full justify-evenly z-50 fixed top-0 shadow-sm bg-opacity-100 bg-gray-50`}
+      className={`flex flex-row w-full justify-evenly z-50 fixed top-0 shadow-sm bg-white`}
     >
-      <NavItem text={NAV_ITEMS.ABOUT} onClick={scrollTo} />
-      <NavItem text={NAV_ITEMS.EDUCATION} onClick={scrollTo} />
-      <NavItem text={NAV_ITEMS.PROJECTS} onClick={scrollTo} />
-      <NavItem text={NAV_ITEMS.CONTACT} onClick={scrollTo} />
+      {Object.values(NAV_ITEMS).map((text, index) => {
+        return <WebItem text={text} onClick={scrollTo} key={index} />;
+      })}
     </header>
   );
 };
