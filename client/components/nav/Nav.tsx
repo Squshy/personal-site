@@ -1,19 +1,21 @@
-import React, { Dispatch, SetStateAction } from "react";
-import { NavItem } from "./NavItem";
+import React from "react";
+import { useMediaPredicate } from "react-media-hook";
+import { MobileNav } from "./MobileNav";
+import { WebNav } from "./WebNav";
 
 interface NavProps {
   scrollTo: (link: string) => void;
 }
 
-export const Nav: React.FC<NavProps> = ({ scrollTo }) => {
+const COMMON_CLASSES = "w-full z-50 fixed bg-white shadow-md"
 
-  return (
-    <header
-      className={`flex flex-row w-full justify-evenly z-50 fixed top-0 bg-gray-50 bg-opacity-5 shadow-sm`}
-    >
-      <NavItem text={`About`} onClick={scrollTo} />
-      <NavItem text={`Education`} onClick={scrollTo} />
-      <NavItem text={`Projects`} onClick={scrollTo} />
-    </header>
-  );
+export const Nav: React.FC<NavProps> = ({ scrollTo }) => {
+  const showWebNav:boolean = useMediaPredicate("(min-width: 640px)");
+
+  const displayNav = () => {
+    if(showWebNav) return <WebNav scrollTo={scrollTo} className={COMMON_CLASSES}/>
+    return <MobileNav scrollTo={scrollTo} className={COMMON_CLASSES}/>
+  }
+
+  return displayNav();
 };

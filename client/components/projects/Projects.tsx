@@ -26,6 +26,12 @@ export const Projects: React.FC<ProjectsProps> = ({ projects }) => {
             );
           })}
         </div>
+        <a
+          className={`text-sm italic hover:text-gray-999 transition duration-100 `}
+          href="https://github.com/Squshy"
+        >
+          More projects listed on my GitHub
+        </a>
       </BodyWrapper>
     </FadeIn>
   );
