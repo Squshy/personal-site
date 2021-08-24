@@ -14,6 +14,7 @@ import educations from "../public/static/education/education.json";
 import projects from "../public/static/projects/projects.json";
 import { EDUCATION, PROJECTS, ABOUT, CONTACT } from "../constants";
 import { Contact } from "../components/contact/Contact";
+import useOnScreen from "../hooks/useOnScreen";
 
 interface IndexProps {
   aboutData: AboutProps;

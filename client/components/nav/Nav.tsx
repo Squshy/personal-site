@@ -6,10 +6,9 @@ interface NavProps {
 }
 
 export const Nav: React.FC<NavProps> = ({ scrollTo }) => {
-
   return (
     <header
-      className={`flex flex-row w-full justify-evenly z-50 fixed top-0 bg-gray-50 bg-opacity-5 shadow-sm`}
+      className={`flex flex-row w-full justify-evenly z-50 fixed top-0 shadow-sm bg-opacity-100 bg-gray-50`}
     >
       <NavItem text={`About`} onClick={scrollTo} />
       <NavItem text={`Education`} onClick={scrollTo} />
