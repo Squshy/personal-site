@@ -13,6 +13,7 @@ import { getAboutInfo } from "../lib/about";
 import educations from "../public/static/education/education.json";
 import projects from "../public/static/projects/projects.json";
 import { EDUCATION, PROJECTS, ABOUT } from "../constants";
+import { Contact } from "../components/contact/Contact";
 
 interface IndexProps {
   aboutData: AboutProps;
@@ -87,6 +88,9 @@ const Home: NextPage<IndexProps> = ({ aboutData, educations, projects }) => {
         </div>
         <div ref={projectRef}>
           <Projects projects={projects} />
+        </div>
+        <div>
+          <Contact />
         </div>
       </main>
       <Footer />
