@@ -23,6 +23,7 @@ export const MobileNav: React.FC<MobileNavProps> = ({
   return (
     <header
       className={`flex flex-col justify-end p-2 ${className}`}
+      id="mobilenav"
     >
       <div className={`flex flex-row justify-between items-center`}>
         <p className={`text-center ml-2 font-medium`}>Calvin Lapp</p>
