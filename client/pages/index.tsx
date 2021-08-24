@@ -12,7 +12,7 @@ import { Projects } from "../components/projects/Projects";
 import { getAboutInfo } from "../lib/about";
 import educations from "../public/static/education/education.json";
 import projects from "../public/static/projects/projects.json";
-import { EDUCATION, PROJECTS, ABOUT } from "../constants";
+import { NAV_ITEMS } from "../constants";
 import { Contact } from "../components/contact/Contact";
 
 interface IndexProps {
@@ -36,34 +36,31 @@ const Home: NextPage<IndexProps> = ({ aboutData, educations, projects }) => {
   const aboutRef: any = useRef<HTMLDivElement>();
   const educationRef: any = useRef<HTMLDivElement>();
   const projectRef: any = useRef<HTMLDivElement>();
+  const contactRef: any = useRef<HTMLDivElement>();
 
   const scrollToComponent = (link: string) => {
     switch (link) {
-      case ABOUT:
+      case NAV_ITEMS.ABOUT:
         if (aboutRef.current) {
-          console.log("About")
           aboutRef.current.scrollIntoView();
         }
         break;
-      case EDUCATION:
+      case NAV_ITEMS.EDUCATION:
         if (educationRef.current) {
-          console.log("Education")
-          educationRef.current.scrollIntoView({
-            block: "end",
-          });
+          educationRef.current.scrollIntoView();
         }
         break;
-      case PROJECTS:
+      case NAV_ITEMS.PROJECTS:
         if (projectRef.current) {
-          console.log("Projects")
           projectRef.current.scrollIntoView();
         }
         break;
-      default:
-        if (aboutRef.current) {
-          console.log("Default")
-          aboutRef.current.scrollIntoView();
+      case NAV_ITEMS.CONTACT:
+        if (contactRef.current) {
+          contactRef.current.scrollIntoView();
         }
+        break;
+      default:
         break;
     }
   };
@@ -89,7 +86,7 @@ const Home: NextPage<IndexProps> = ({ aboutData, educations, projects }) => {
         <div ref={projectRef}>
           <Projects projects={projects} />
         </div>
-        <div>
+        <div ref={contactRef}>
           <Contact />
         </div>
       </main>
