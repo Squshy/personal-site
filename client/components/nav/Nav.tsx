@@ -14,6 +14,7 @@ export const Nav: React.FC<NavProps> = ({ scrollTo }) => {
       <NavItem text={`About`} onClick={scrollTo} />
       <NavItem text={`Education`} onClick={scrollTo} />
       <NavItem text={`Projects`} onClick={scrollTo} />
+      <NavItem text={`Contact`} onClick={scrollTo} />
     </header>
   );
 };

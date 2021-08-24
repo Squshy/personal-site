@@ -4,6 +4,7 @@ import { Title } from "../Title";
 import { InputField } from "./InputField";
 import { TextField } from "./TextField";
 import axios from "axios";
+import { FadeIn } from "../FadeIn";
 
 interface FieldStructure {
   value: string | null;
@@ -64,7 +65,7 @@ export const Contact: React.FC = () => {
 
   return (
     <BodyWrapper bgColor={`bg-gray-200`}>
-      <div
+      <FadeIn
         className={`h-full w-full bg-white p-12 flex flex-col items-center rounded-sm`}
       >
         <Title text="Contact" />
@@ -100,7 +101,7 @@ export const Contact: React.FC = () => {
             SEND
           </button>
         </form>
-      </div>
+      </FadeIn>
     </BodyWrapper>
   );
 };

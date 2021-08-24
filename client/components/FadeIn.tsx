@@ -2,7 +2,11 @@ import React, { useEffect, useRef } from "react";
 import { motion, useAnimation } from "framer-motion";
 import useOnScreen from "../hooks/useOnScreen";
 
-export const FadeIn: React.FC = ({ children }) => {
+interface FadeInProps {
+  className?: string;
+}
+
+export const FadeIn: React.FC<FadeInProps> = ({ className, children }) => {
   const controls = useAnimation();
   const ref: any = useRef<HTMLDivElement>();
   const onScreen = useOnScreen(ref);
@@ -20,7 +24,7 @@ export const FadeIn: React.FC = ({ children }) => {
   }, [onScreen, controls]);
   
   return (
-    <motion.div initial={{ opacity: 0, y: 50 }} animate={controls} ref={ref}>
+    <motion.div initial={{ opacity: 0, y: 50 }} animate={controls} ref={ref} className={className}>
       {children}
     </motion.div>
   );
