@@ -10,7 +10,9 @@
   },
   "dependencies": {
     "@heroicons/react": "^1.0.3",
+    "@sendgrid/mail": "^7.4.6",
     "axios": "^0.21.1",
+    "email-validator": "^2.0.4",
     "framer-motion": "^4.1.17",
     "gray-matter": "^4.0.3",
     "next": "11.1.0",

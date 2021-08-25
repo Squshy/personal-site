@@ -5,6 +5,7 @@ import { InputField } from "./InputField";
 import { TextField } from "./TextField";
 import axios from "axios";
 import { FadeIn } from "../FadeIn";
+import { CheckIcon } from "@heroicons/react/outline";
 
 interface FieldStructure {
   value: string | null;
@@ -27,6 +28,7 @@ export const Contact: React.FC = () => {
   });
   useState<string | null>(null);
   const [loading, setLoading] = useState<boolean>(false);
+  const [success, setSuccess] = useState<boolean>(false);
 
   const verifyForm = (): boolean => {
     let isValid = true;
@@ -50,15 +52,20 @@ export const Contact: React.FC = () => {
     if (!verifyForm()) return;
     setLoading(true);
     const body = {
-      name: name,
-      email: email,
-      message: message,
+      name: name.value,
+      email: email.value,
+      message: message.value,
     };
     axios
       .post(`/api/mail`, body)
       .then((response) => {
         console.log(response);
         setLoading(false);
+        if (!response.data.success) {
+          setEmail({ ...email, error: response.data.msg });
+        } else {
+          setSuccess(response.data.success);
+        }
       })
       .catch((err) => console.log(err));
   };
@@ -95,10 +102,21 @@ export const Contact: React.FC = () => {
             />
           </div>
           <button
-            className={`transition duration-150 ease-in-out w-full border border-gray-300 bg-gray-50 hover:bg-gray-999 hover:text-white hover:border-white rounded-sm py-3`}
+            className={`h-12 transition duration-150 ease-in-out w-full border border-gray-300 bg-gray-50 ${
+              loading || success
+                ? "hover:bg-green-200 hover:text-gray-999 hover:border-green-500 bg-green-100 border-green-500"
+                : "hover:bg-gray-999 hover:text-white"
+            } hover:border-white rounded-sm py-3 ${
+              loading || (success && "cursor-not-allowed")
+            } flex justify-center`}
             type="submit"
+            disabled={loading ? true : success ? true : false}
           >
-            SEND
+            {success ? (
+              <CheckIcon className={`h-4 w-4 text-green-500 self-center`} />
+            ) : (
+              "SEND MESSAGE"
+            )}
           </button>
         </form>
       </FadeIn>
