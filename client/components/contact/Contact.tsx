@@ -50,9 +50,9 @@ export const Contact: React.FC = () => {
     if (!verifyForm()) return;
     setLoading(true);
     const body = {
-      name: name,
-      email: email,
-      message: message,
+      name: name.value,
+      email: email.value,
+      message: message.value,
     };
     axios
       .post(`/api/mail`, body)
