@@ -13,11 +13,9 @@ export const Nav: React.FC<NavProps> = ({ scrollTo }) => {
   const showWebNav: boolean = useMediaPredicate("(min-width: 640px)");
 
   const displayNav = () => {
-    console.log("Show Web Nav:", showWebNav);
     if (showWebNav) {
       return <WebNav scrollTo={scrollTo} className={COMMON_CLASSES} />;
-    } //else return <MobileNav scrollTo={scrollTo} className={COMMON_CLASSES} />;
-    else
+    } else
       return (
         <div>
           <MobileNav scrollTo={scrollTo} className={COMMON_CLASSES} />

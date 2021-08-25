@@ -13,6 +13,7 @@ import { getAboutInfo } from "../lib/about";
 import educations from "../public/static/education/education.json";
 import projects from "../public/static/projects/projects.json";
 import { NAV_ITEMS } from "../constants";
+import Head from "next/head";
 // import { Contact } from "../components/contact/Contact";
 
 interface IndexProps {
@@ -67,6 +68,9 @@ const Home: NextPage<IndexProps> = ({ aboutData, educations, projects }) => {
 
   return (
     <>
+      <Head>
+        <title>Calvin Lapp</title>
+      </Head>
       <Nav scrollTo={scrollToComponent} />
       <main className={`relative`}>
         <SelfBackground>
