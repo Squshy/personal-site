@@ -59,6 +59,9 @@ export const Contact: React.FC = () => {
       .then((response) => {
         console.log(response);
         setLoading(false);
+        if (!response.data.success) {
+          setEmail({ ...email, error: response.data.msg });
+        }
       })
       .catch((err) => console.log(err));
   };
