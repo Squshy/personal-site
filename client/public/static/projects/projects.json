@@ -22,5 +22,11 @@
     "description": "The site you are currently looking at is up on GitHub 👨‍🌾.",
     "github": "https://github.com/Squshy/personal-site",
     "liveDemo": null
+  },
+  {
+    "title": "Algorithm Showcase",
+    "description": "A display of different algorithms at work.",
+    "github": "https://github.com/Squshy/algorithm-showcase",
+    "liveDemo": "https://algorithms.calvinlapp.ca/"
   }
 ]

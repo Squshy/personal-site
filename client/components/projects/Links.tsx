@@ -21,7 +21,7 @@ export const ProjectLinks: React.FC<ProjectLinks> = ({ github, livedemo }) => {
         </Link>
       </div>
       {livedemo && (
-        <Link href={github} passHref>
+        <Link href={livedemo} passHref>
           <a>
             <ExternalLinkIcon className={`${baseIconClass} ml-2`} />
           </a>
