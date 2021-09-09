@@ -1,7 +1,6 @@
 import React from "react";
 import { GitHubIcon } from "../svg/GitHubIcon";
 import { MailIcon } from "@heroicons/react/outline";
-import Link from "next/link";
 import { LinkedInIcon } from "../svg/LinkedInLogo";
 
 const COMMON_STYLES =
