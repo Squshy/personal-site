@@ -6,6 +6,12 @@
     "liveDemo": null
   },
   {
+    "title": "Reddit Clone",
+    "description": "A simple reddit clone made with NextJs, Typescript, Chakra Ui, Node.js, express, and GraphQL",
+    "github": "https://github.com/Squshy/fullstack_tut",
+    "liveDemo": null
+  },
+  {
     "title": "Squickz",
     "description": "A browser clicker game made with React.",
     "github": "https://github.com/Squshy/Squickz",
