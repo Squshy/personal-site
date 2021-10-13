@@ -1,4 +1,16 @@
 [
+{
+    "title": "Algorithm Showcase",
+    "description": "A display of different algorithms at work.",
+    "github": "https://github.com/Squshy/algorithm-showcase",
+    "liveDemo": "https://algorithms.calvinlapp.ca/"
+  },
+  {
+    "title": "Voice Snek🐍",
+    "description": "A voice controlled snake game.",
+    "github": "https://github.com/Squshy/voice-snake",
+    "liveDemo": "https://snake.calvinlapp.ca/"
+  },
   {
     "title": "Mood Calendar App",
     "description": "A simple mood tracking app made with Flutter.",
@@ -28,11 +40,5 @@
     "description": "The site you are currently looking at is up on GitHub 👨‍🌾.",
     "github": "https://github.com/Squshy/personal-site",
     "liveDemo": null
-  },
-  {
-    "title": "Algorithm Showcase",
-    "description": "A display of different algorithms at work.",
-    "github": "https://github.com/Squshy/algorithm-showcase",
-    "liveDemo": "https://algorithms.calvinlapp.ca/"
   }
 ]
