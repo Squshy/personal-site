@@ -14,7 +14,6 @@ import educations from "../public/static/education/education.json";
 import projects from "../public/static/projects/projects.json";
 import { NAV_ITEMS } from "../constants";
 import Head from "next/head";
-import { Contact } from "../components/contact/Contact";
 
 interface IndexProps {
   aboutData: AboutProps;
@@ -37,7 +36,6 @@ const Home: NextPage<IndexProps> = ({ aboutData, educations, projects }) => {
   const aboutRef: any = useRef<HTMLDivElement>();
   const educationRef: any = useRef<HTMLDivElement>();
   const projectRef: any = useRef<HTMLDivElement>();
-  const contactRef: any = useRef<HTMLDivElement>();
 
   const scrollToComponent = (link: string) => {
     switch (link) {
@@ -54,11 +52,6 @@ const Home: NextPage<IndexProps> = ({ aboutData, educations, projects }) => {
       case NAV_ITEMS.PROJECTS:
         if (projectRef.current) {
           projectRef.current.scrollIntoView();
-        }
-        break;
-      case NAV_ITEMS.CONTACT:
-        if (contactRef.current) {
-          contactRef.current.scrollIntoView();
         }
         break;
       default:
@@ -89,9 +82,6 @@ const Home: NextPage<IndexProps> = ({ aboutData, educations, projects }) => {
         </div>
         <div ref={projectRef}>
           <Projects projects={projects} />
-        </div>
-        <div ref={contactRef}>
-          <Contact />
         </div>
       </main>
       <Footer />
